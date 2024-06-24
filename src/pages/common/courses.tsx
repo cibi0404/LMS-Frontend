@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CommonNav from '../../components/commonNav';
 import data from '../../course_content/data.json'
 import Card from 'react-bootstrap/Card';
