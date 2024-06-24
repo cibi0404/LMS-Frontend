@@ -2,21 +2,21 @@ import TextComponent from "../../components/TextComponent"
 import ContainerComponent from "../../components/ContainerComponent"
 import Card from 'react-bootstrap/Card';
 import ButtonComponent from "../../components/ButtonComponent";
-import logo from "../../assets/logo.png"
+
 import { useState } from "react";
 import * as Yup from 'yup'
 import { useFormik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import LoginCredentials from "../../model/authorised";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../store/store";
+import { useDispatch} from "react-redux";
+import { AppDispatch } from "../../store/store";
 import { loginAuthentication } from "../../store/slice/userSlice";
 import CommonNav from "../../components/commonNav";
 import swal from 'sweetalert';
 
 const LoginScreen: React.FC = () => {
     const navigate = useNavigate();
-    const [showError, setShowError] = useState<string | null>(null);
+   
     const dispatch = useDispatch<AppDispatch>();
 
     const formik = useFormik({
@@ -97,7 +97,7 @@ const LoginScreen: React.FC = () => {
                                         <ButtonComponent type="submit" className="loginBtn">SignIn</ButtonComponent>
                                     </form>
                                 </ContainerComponent>
-                                {showError && <div className="error">{showError}</div>}
+                             
                                 <p style={{ padding: "10px" }}>Need to create an account? <Link to="/register">click here</Link></p>
                             </Card>
                         </div>
