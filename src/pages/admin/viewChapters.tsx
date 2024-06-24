@@ -130,13 +130,10 @@ const ViewChapters: React.FC<ChapterProps> = ({ courseId }) => {
                     <h3 className="sidebar-title">Chapters</h3>
                     <div className="sidebar-item tags">
                       <ul>
-                        {chapters?.map(( index) => (
+                      {chapters?.map((chap, index) => (
                           <li key={index} className={index === currentChapterIndex ? 'active' : ''}>
-                            {rate <= index ? (
-                              <a href="#">Chapter {index + 1}</a>
-                            ) : (
-                              <a href="#" className='completed'>Chapter {index + 1}</a>
-                            )}
+                            {rate<=index?(<><a href="#" >Chapter {index + 1}</a></>):(<><a href="#" className='completed'>Chapter {index + 1}</a></>)}
+                            <span>{chap.title}</span>
                           </li>
                         ))}
                       </ul>
