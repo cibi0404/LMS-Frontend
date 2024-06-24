@@ -130,7 +130,7 @@ const ViewChapters: React.FC<ChapterProps> = ({ courseId }) => {
                     <h3 className="sidebar-title">Chapters</h3>
                     <div className="sidebar-item tags">
                       <ul>
-                        {chapters?.map((chap, index) => (
+                        {chapters?.map(( index) => (
                           <li key={index} className={index === currentChapterIndex ? 'active' : ''}>
                             {rate <= index ? (
                               <a href="#">Chapter {index + 1}</a>
