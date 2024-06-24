@@ -72,7 +72,11 @@ const userSlice = createSlice({
             state.users.push(action.payload);
         },
         deleteUser: (state, action: PayloadAction<number>) => {
-            state.users = state.users.filter((user, index) => index !== action.payload);
+            state.users = state.users.filter((user, index) => {
+                index !== action.payload
+                console.log(user._id)
+            });
+            
         },
         viewUserList: () => {},
     },
