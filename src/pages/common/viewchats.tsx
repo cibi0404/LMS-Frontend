@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getAllMessage } from "../../store/slice/messageSlice";
 import { chatsInterface } from "../../model/chatsInterface";
 import SideBar from "../../components/Sidebar";
-import ChatComponent from "../../components/ChatComponent";
+
 import InstructorChatComponent from "../../components/InstructorChatComponent";
 
 const ViewChats: React.FC = () => {
