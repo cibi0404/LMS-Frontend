@@ -9,7 +9,7 @@ import { editUserInterface } from '../../model/editUser';
 const ViewUserList: React.FC = () => {
     const users = useSelector((state: RootState) => state.user.users);
     const dispatch = useDispatch<AppDispatch>()
-    const [isEdit, setIsEdit] = useState<number | null>(null)
+    const [ setIsEdit] = useState<number | null>(null)
     const [isEnabled, setEnabled] = useState<boolean | null>(false)
     const [editUserDetails, setEditUserDetails] = useState<UserInterface | null>(null)
     useEffect(() => {
@@ -60,7 +60,7 @@ const ViewUserList: React.FC = () => {
 
                             {user.username}
                             <button onClick={() => handleEdit(index, user)} >Edit</button>
-                            <button onClick={()=>deleteUser(user._id)}>Delete</button>
+                            <button onClick={()=>deleteUser(user._id?)}>Delete</button>
 
 
 
