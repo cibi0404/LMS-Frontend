@@ -8,7 +8,7 @@ import { editUserInterface } from '../../model/editUser';
 const ViewUserList: React.FC = () => {
     const users = useSelector((state: RootState) => state.user.users);
     const dispatch = useDispatch<AppDispatch>()
-    const [setIsEdit] = useState<number | null>(null)
+    const [isEdit,setIsEdit] = useState<number | null>(null)
     const [isEnabled, setEnabled] = useState<boolean | null>(false)
     const [editUserDetails, setEditUserDetails] = useState<UserInterface | null>(null)
 
@@ -26,6 +26,7 @@ const ViewUserList: React.FC = () => {
         setIsEdit(index)
         setEnabled(true)
         setEditUserDetails(userDetails)
+        console.log(isEdit)
     }
 
     const handleSave = () => {
