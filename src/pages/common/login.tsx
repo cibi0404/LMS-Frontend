@@ -2,8 +2,6 @@ import TextComponent from "../../components/TextComponent"
 import ContainerComponent from "../../components/ContainerComponent"
 import Card from 'react-bootstrap/Card';
 import ButtonComponent from "../../components/ButtonComponent";
-
-import { useState } from "react";
 import * as Yup from 'yup'
 import { useFormik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
