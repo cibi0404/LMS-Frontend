@@ -3,7 +3,7 @@ import { chatsInterface  } from "../model/chatsInterface"
 import { useDispatch } from "react-redux"
 import { AppDispatch } from "../store/store"
 import Utils from "../pages/common/utils"
-import { addChat, postToMessage } from "../store/slice/messageSlice"
+import { postToMessage } from "../store/slice/messageSlice"
 
 interface chatProps{
     message:chatsInterface[]
